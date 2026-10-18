@@ -97,22 +97,22 @@ The exchange rate is configurable rather than automatically fetched from a live 
 
 ```mermaid
 flowchart TD
-    A[Customer Checkout] --> B{Select Payment Method}
+    A["Customer Checkout"] --> B{"Select Payment Method"}
 
-    B --> C[Cash on Delivery]
-    B --> D[Stripe Checkout]
-    B --> E[Bank Transfer]
+    B --> C["Cash on Delivery"]
+    B --> D["Stripe Checkout"]
+    B --> E["Bank Transfer"]
 
-    C --> F[Order Created as Unpaid]
-    D --> G[Stripe Hosted Payment Page]
-    G --> H[Return and Verification Flow]
-    E --> I[Display Transfer Instructions]
-    I --> J[Customer Sends Transfer]
-    J --> K[Admin Verifies Payment]
+    C --> F["Order Created as Unpaid"]
+    D --> G["Stripe Hosted Payment Page"]
+    G --> H["Return and Verification Flow"]
+    E --> I["Display Transfer Instructions"]
+    I --> J["Customer Sends Transfer"]
+    J --> K["Admin Verifies Payment"]
 
-    F --> L[Admin Manages Order]
-    H --> M[Order Payment Status]
-    K --> N[Order Marked as Paid]
+    F --> L["Admin Manages Order"]
+    H --> M["Order Payment Status"]
+    K --> N["Order Marked as Paid"]
 ```
 
 > **Payment security:** A successful redirect to a payment return page should not, by itself, be treated as proof of payment. Before using this application for real transactions, implement and verify server-side Stripe payment confirmation using the Checkout Session status or signed webhooks. Ensure the server validates payment amounts and order ownership.
@@ -138,16 +138,16 @@ The application consists of three separate applications.
 
 ```mermaid
 flowchart TD
-    A[Customer Storefront] --> C[Express REST API]
-    B[Admin Dashboard] --> C
+    A["Customer Storefront"] --> C["Express REST API"]
+    B["Admin Dashboard"] --> C
 
-    C --> D[MongoDB Atlas]
-    C --> E[Cloudinary]
-    C --> F[Stripe Checkout]
+    C --> D["MongoDB Atlas"]
+    C --> E["Cloudinary"]
+    C --> F["Stripe Checkout"]
 
-    D --> G[Users, Products, Carts and Orders]
-    E --> H[Product Images]
-    F --> I[Hosted Payment Flow]
+    D --> G["Users, Products, Carts and Orders"]
+    E --> H["Product Images"]
+    F --> I["Hosted Payment Flow"]
 ```
 
 The customer storefront and admin dashboard communicate with the backend through REST API endpoints. The backend handles application logic and database operations, while Cloudinary stores product images and Stripe provides hosted checkout.
