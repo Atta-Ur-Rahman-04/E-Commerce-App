@@ -424,16 +424,6 @@ This project demonstrates full-stack e-commerce workflows, but additional work i
 
 **Atta-Ur-Rahman**  
 
-## Live Demo
-
-| Application | Link |
-|---|---|
-| Customer storefront | https://forever-frontend-three-puce.vercel.app |
-| Admin dashboard | https://forever-admin-six-orpin.vercel.app |
-| Backend API | https://forever-backend-ten-snowy.vercel.app |
-
-> **Testing note:** Stripe runs in test mode. Bank Transfer uses dummy account details for demonstration only, so no real money should be transferred. The admin dashboard is protected, and its credentials are not public.
-
 ---
 
 *Built as a full-stack e-commerce portfolio project to practice frontend development, REST API design, database integration, authentication, image uploads, order management, and payment workflows.*
