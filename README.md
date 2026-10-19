@@ -432,7 +432,7 @@ This project demonstrates full-stack e-commerce workflows, but additional work i
 | Admin dashboard | https://forever-admin-six-orpin.vercel.app |
 | Backend API | https://forever-backend-ten-snowy.vercel.app |
 
-> **Testing note:** Stripe runs in test mode (card `4242 4242 4242 4242`, any future expiry date, any CVC). Bank Transfer uses dummy account details for demonstration only, so no real money should be transferred. The admin dashboard is protected, and its credentials are not public.
+> **Testing note:** Stripe runs in test mode. Bank Transfer uses dummy account details for demonstration only, so no real money should be transferred. The admin dashboard is protected, and its credentials are not public.
 
 ---
 
